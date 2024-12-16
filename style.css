@@ -446,3 +446,19 @@ a:hover {
     text-decoration: underline; /* 마우스를 올리면 밑줄이 생기게 */
     color: #0073e6; /* 링크 색상 변경 */
 }
+
+.project-links a {
+    display: block;
+    font-size: 14px;  /* 폰트 크기 조정 */
+    margin-top: 12px;  /* 링크들 간의 간격 */
+    color: #000;  /* 글자 색상 */
+    text-decoration: none;  /* 밑줄 제거 */
+}
+
+.project-links a:hover {
+    color: #007bff;  /* 링크 hover시 색상 변경 */
+}
+.smaller-text {
+    font-size: 12px;  /* 글자 크기 작게 설정 */
+    line-height: 1.5;  /* 줄 간격을 약간 넓혀서 가독성 향상 */
+}
