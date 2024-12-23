@@ -1,0 +1,46 @@
+/* 배경 이미지 */
+.header-image {
+  background-image: url("../image/backend.png"); /* 이미지 경로 */
+  background-size: contain; /* 화면을 꽉 채우면서 비율 유지 */
+  background-repeat: no-repeat; /* 이미지 반복 방지 */
+  background-position: center; /* 이미지를 중앙 정렬 */
+  width: 100%; /* 가로 전체 크기 */
+  height: 400px; /* 원하는 높이 설정 */
+  background-color: #EAEAEA;
+}
+
+/* Navbar 스타일 */
+nav {
+  background-color: white; /* Navbar의 배경색 */
+  width: 100%; /* 가로 전체 크기 */
+  padding: 10px 0;
+  position: sticky; /* 화면 위에 고정 */
+  top: 0;
+  z-index: 10;
+  background-color: #EAEAEA;
+  
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* 메뉴를 중앙 정렬 */
+  gap: 60px; /* 메뉴 항목 간 간격 설정 */
+}
+
+nav ul li {
+  margin: 0 15px; /* 메뉴 항목 간격 조정 */
+}
+
+nav ul li a {
+  color: black; /* 글씨 색상 */
+  font-size: 1.2rem; /* 글씨 크기 */
+  font-weight: bold; /* 글씨 두께 */
+  text-decoration: none; /* 밑줄 제거 */
+}
+
+nav ul li a:hover {
+  color: gray; /* 마우스 오버 시 색상 변경 */
+}

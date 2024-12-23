@@ -1,0 +1,96 @@
+#projects {
+  margin: 2rem 0;
+}
+
+#projects h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+#projects .projects-container {
+  display: flex;
+  flex-wrap: wrap; /* 줄바꿈 허용 */
+  gap: 10px; /* 카드 간 간격 */
+  justify-content: center; /* 중앙 정렬 */
+  max-width: 1000px; /* 전체 컨테이너 최대 너비 */
+  margin: 0 auto; /* 화면 중앙 정렬 */
+}
+
+#projects article {
+  flex: 1 1 calc(33.333% - 20px); /* 3개씩 배치, 간격 포함 */
+  max-width: calc(33.333% - 20px); /* 최대 너비 */
+  padding: 15px;
+  border: 2px solid transparent; /* 투명 테두리 */
+  border-radius: 10px; /* 둥근 모서리 */
+  background: linear-gradient(#FFFACD, #FAFAD2) padding-box, /* 내부 배경 */
+              linear-gradient(45deg, #FFD700, #FFA500) border-box; /* 노란색 계열 그라데이션 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 내부 그림자 */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin-bottom: 1.5rem;
+}
+
+#projects article:hover {
+  transform: translateY(-5px); /* 살짝 올라오는 효과 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 강조된 그림자 */
+}
+
+#projects .image-text img {
+  width: 30px; /* 아이콘 너비 */
+  height: 30px; /* 아이콘 높이 */
+  object-fit: cover; /* 비율 유지 */
+  border-radius: 5px; /* 둥근 모서리 */
+}
+
+
+#projects .image-text {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 텍스트와 이미지 간 간격 */
+}
+
+#projects .image-text img {
+  width: 30px; /* 아이콘 너비 */
+  height: 30px; /* 아이콘 높이 */
+  object-fit: cover; /* 비율 유지 */
+  border-radius: 5px; /* 둥근 모서리 */
+}
+
+#projects .project-details h3 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: var(--primary-color);
+}
+
+#projects .project-details p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+#projects .project-details ul {
+  margin: 0.5rem 0;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+#projects .project-links {
+  margin-top: 1rem;
+}
+
+#projects .project-links a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 0.85rem;
+  color: #0033cc; /* 진한 파랑색 */
+  font-weight: bold; /* 굵게 */
+  text-decoration: none; /* 기본 밑줄 제거 */
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out; /* 부드러운 전환 효과 */
+}
+
+#projects .project-links a:hover {
+  color: #000099; /* 더 어두운 파랑색 */
+  text-decoration: underline; /* 마우스 올릴 때 밑줄 추가 */
+}

@@ -1,0 +1,106 @@
+/* Combined 컨테이너 설정 */
+.combined-container {
+    display: flex; /* 가로 정렬 */
+    justify-content: space-between; /* 섹션 간 여백 생성 */
+    align-items: flex-start; /* 위쪽 정렬 */
+    gap: 40px; /* 섹션 간 간격 */
+    max-width: 1200px; /* 최대 너비 */
+    margin: 0 auto; /* 가운데 정렬 */
+    padding: 20px; /* 전체 여백 */
+  }
+  
+  /* ME 섹션 스타일 */
+  .ME {
+    flex: 5;
+    display: flex; /* 가로 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    gap: 20px; /* 이미지와 텍스트 간 간격 */
+    margin-right: 30px;
+  }
+  
+  .ME-image {
+    flex-shrink: 0; /* 이미지 크기 고정 */
+  }
+  
+  .ME-image img {
+    margin-top: 70px;
+    width: 250px; /* 이미지 너비 */
+    height: 200px; /* 이미지 높이 */
+    object-fit: cover; /* 비율 유지하며 자르기 */
+    border-radius: 50%; /* 동그랗게 만들기 */
+    border: 2px solid #ddd; /* 테두리 추가 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+  }
+  
+  .ME-text {
+    margin-top: 30px;
+    flex: 1; /* 남은 공간 사용 */
+  }
+  
+  .ME-text h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .ME-text p {
+    font-size: 0.7rem;
+    color: #666;
+    margin: 5px 0;
+  }
+
+  .github-link {
+    font-weight: bold; /* 글씨 굵게 */
+    color: #0033cc; /* 진한 파랑색 */
+    text-decoration: none; /* 밑줄 제거 */
+    transition: color 0.3s ease-in-out; /* 색상 전환 효과 */
+  }
+  
+  .github-link:hover {
+    color: #000099; /* 호버 시 더 어두운 파랑색 */
+    text-decoration: underline; /* 호버 시 밑줄 추가 */
+  }
+  
+  /* Information 섹션 스타일 */
+  .Information {
+    margin-left:  30px;
+    flex: 5;
+    text-align: center; /* 전체 텍스트 가운데 정렬 */
+  }
+  
+  .Information h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
+
+  
+  .box-container {
+    display: flex;
+    flex-wrap: wrap; /* 반응형으로 줄바꿈 가능 */
+    gap: 20px; /* 박스 간 간격 */
+    justify-content: space-between; /* 양쪽 정렬 */
+}
+
+.box {
+    flex: 1 1 calc(45% - 20px); /* 4등분으로 나눔 */
+    max-width: calc(50% - 20px); /* 최대 너비 설정 */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* 박스 내 텍스트 가운데 정렬 */
+}
+
+.box h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.box p, 
+.box a {
+    font-size: 0.7rem;
+    margin: 5px 0;
+    color: #666;
+}

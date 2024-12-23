@@ -1,0 +1,64 @@
+#skills {
+  margin: 2rem 0;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid transparent; /* 외부 테두리 */
+  border-radius: 15px; /* 둥근 모서리 */
+
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 외부 그림자 */
+}
+
+#skills h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.skills-container {
+  display: flex; /* 가로 정렬 */
+  justify-content: space-around; /* 요소 간격 균등 */
+  align-items: flex-start; /* 위쪽 정렬 */
+  gap: 20px;
+}
+
+.tech {
+  flex: 1; /* 균등한 너비 */
+  text-align: center;
+  padding: 15px;
+  border: 2px solid transparent; /* 투명 테두리 */
+  border-radius: 10px; /* 둥근 모서리 */
+  background: linear-gradient(#fff, #fff) padding-box, /* 내부 배경 */
+              linear-gradient(45deg, #FFD700, #FFA500) border-box; /* 노란색 계열 그라데이션 */
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 내부 그림자 */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.tech:hover {
+  transform: translateY(-5px); /* 살짝 위로 올라가는 효과 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 호버 시 그림자 확대 */
+}
+
+.tech h3 {
+  font-size: 1.2rem;
+  color: var(--primary-color, #333);
+  margin-bottom: 10px;
+}
+
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap; /* 반응형으로 아이콘 줄바꿈 가능 */
+}
+
+.tech-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.tech-icons img:hover {
+  transform: scale(1.1);
+}

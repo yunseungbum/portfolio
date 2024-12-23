@@ -1,0 +1,30 @@
+
+
+#activity {
+  margin: 2rem 0;
+  display: flex; /* 가로 정렬 */
+  justify-content: center; /* 가로 방향 중앙 정렬 */
+  align-items: center; /* 세로 방향 중앙 정렬 */
+}
+
+#activity .box-container {
+  flex: 0 0 calc(33.333%); /* 박스를 화면 너비의 3분의 1 크기로 설정 */
+  max-width: calc(33.333%); /* 최대 너비 제한 */
+}
+
+#activity .box {
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+#activity .box p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #333;
+  text-align: center; /* 텍스트 가운데 정렬 */
+}
+
