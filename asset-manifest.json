@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.2d5d3f50.css",
+    "main.js": "/portfolio/static/js/main.1bbaa5dc.js",
+    "static/js/488.21a3b654.chunk.js": "/portfolio/static/js/488.21a3b654.chunk.js",
+    "static/media/volunteer.jpg": "/portfolio/static/media/volunteer.9adfc758463dfdad8c86.jpg",
+    "static/media/KakaoTalk_20241211_103756459.png": "/portfolio/static/media/KakaoTalk_20241211_103756459.7ec5acfe1bcf0a66ef81.png",
+    "static/media/backend.png": "/portfolio/static/media/backend.43398e75c9f76bce44b4.png",
+    "static/media/Firebase-Light.svg": "/portfolio/static/media/Firebase-Light.be39887274fc1d39cbc0965e75787612.svg",
+    "static/media/ymlIkon.png": "/portfolio/static/media/ymlIkon.3e7bcb78c63dbaee2d88.png",
+    "static/media/Postman.svg": "/portfolio/static/media/Postman.6936833bc99b5a07559a3cfbb41db20f.svg",
+    "static/media/AWS-Light.svg": "/portfolio/static/media/AWS-Light.5884438f691cc18cce48b06b820acff0.svg",
+    "static/media/MySQL-Light.svg": "/portfolio/static/media/MySQL-Light.1baf3273bad5f3b9714f0927cf7d8b3a.svg",
+    "static/media/AndroidStudio-Light.svg": "/portfolio/static/media/AndroidStudio-Light.db4b5800e424a9cf27dde8e759a34c37.svg",
+    "static/media/NodeJS-Light.svg": "/portfolio/static/media/NodeJS-Light.aea93409f1111d62a1eaa3347b033dda.svg",
+    "static/media/Eclipse-Light.svg": "/portfolio/static/media/Eclipse-Light.c8b7ffe8e37dd4095fd291e730914e80.svg",
+    "static/media/Gradle-Light.svg": "/portfolio/static/media/Gradle-Light.65a621298b2e660e665122a63eb55546.svg",
+    "static/media/Github-Light.svg": "/portfolio/static/media/Github-Light.6bf5de3062f954cfa4589e35b3faa91d.svg",
+    "static/media/Git.svg": "/portfolio/static/media/Git.87d6e2a3383a582dd8d951daf9c95c04.svg",
+    "static/media/Java-Light.svg": "/portfolio/static/media/Java-Light.76016987bb8232e257a6187980dab1cf.svg",
+    "static/media/React-Light.svg": "/portfolio/static/media/React-Light.859310e341351502b4a2a19a19f7ad32.svg",
+    "static/media/Spring-Light.svg": "/portfolio/static/media/Spring-Light.e5e2e4cd63f9082b41ec78bbb731727f.svg",
+    "static/media/VSCode.svg": "/portfolio/static/media/VSCode.8a2318f0de04be62a3f172815fe90134.svg",
+    "static/media/JavaScript.svg": "/portfolio/static/media/JavaScript.9f6d2fe5133ce2821b476aa343183565.svg",
+    "static/media/CSS.svg": "/portfolio/static/media/CSS.6c7908e02fa11016d13905e451c5e1e8.svg",
+    "index.html": "/portfolio/index.html",
+    "static/media/HTML.svg": "/portfolio/static/media/HTML.ca0db580ffd74f086f2dc2a71dacd660.svg",
+    "main.2d5d3f50.css.map": "/portfolio/static/css/main.2d5d3f50.css.map",
+    "main.1bbaa5dc.js.map": "/portfolio/static/js/main.1bbaa5dc.js.map",
+    "488.21a3b654.chunk.js.map": "/portfolio/static/js/488.21a3b654.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d5d3f50.css",
+    "static/js/main.1bbaa5dc.js"
+  ]
+}
