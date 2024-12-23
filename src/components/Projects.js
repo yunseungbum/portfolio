@@ -22,7 +22,7 @@ function Projects() {
           text: "회의 및 정리사항",
         },
         { url: "https://docs.google.com/presentation/d/1BV3QbqTImwcl4Vcj4pRKuG88QDvZNodp/edit?usp=drive_link&ouid=110274912202184154568&rtpof=true&sd=true",
-          text: "기술문서" },
+          text: "기술문서(진행중)" },
       ],
     },
   ];
