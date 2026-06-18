@@ -80,9 +80,18 @@
   margin-top: 1rem;
 }
 
+#projects .project-link-main {
+  margin-bottom: 0.5rem;
+}
+
+#projects .project-link-sub {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 #projects .project-links a {
   display: inline-block;
-  margin-right: 10px;
   font-size: 0.85rem;
   color: #0033cc; /* 진한 파랑색 */
   font-weight: bold; /* 굵게 */

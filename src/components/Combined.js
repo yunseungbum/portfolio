@@ -12,9 +12,9 @@ function Combined() {
             <img src={VolunteerImage} alt="profile" />
           </div>
           <div className="ME-text">
-            <h1>Tendai | 백엔드 개발자</h1>
-            <p>자강불식의 대표 아이콘 윤승범입니다.</p>
-            <p>해외봉사를 통해 남들과 다른 마인드를 소유</p>
+            <h1>Tendai | 중고 신입 개발자</h1>
+            <p>현업 감각을 갖춘 개발자 윤승범입니다.</p>
+            <p>해외봉사를 통해 남들과 다른 마인드를 소유했습니다.</p>
             <p>신기술 습득에 두려움보단 신선한 충격을 즐깁니다.</p>
             <p>해결에서 오는 도파민을 즐겨 개발자를 선택했습니다.</p>
             <p><strong>Tendai는 스와힐리어로 "감사"라는 뜻입니다.</strong></p>
@@ -30,7 +30,7 @@ function Combined() {
               <h2>CHANNEL</h2>
               <p>
               <a
-                class="github-link"
+                className="github-link"
                 href="https://github.com/yunseungbum"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -53,6 +53,8 @@ function Combined() {
             </div>
             <div className="box">
               <h2>WORK</h2>
+              <p>2025.02 ~ 재직중</p>
+              <p>쇼핑몰 통합 수집 프로그램 개발(C#) 및 CS업무 보조</p>
               <p>2023.01 ~ 2024.05</p>
               <p>시청 PC 소프트웨어 및 하드웨어 유지보수</p>
             </div>
