@@ -9,7 +9,7 @@ function Combined() {
         {/* ME Section */}
         <div className="ME">
           <div className="ME-image">
-            <img src={VolunteerImage} alt="profile" />
+            <img src={VolunteerImage} alt="윤승범 프로필" title="윤승범 프로필" />
           </div>
           <div className="ME-text">
             <h1>Tendai | 중고 신입 개발자</h1>

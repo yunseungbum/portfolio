@@ -9,6 +9,14 @@ function Projects() {
       title: "농산물유통 종합정보시스템 웹&앱",
       duration: "2024.11.13 ~ 2024.12.30",
       members: "4명 (Backend 담당)",
+      techStack: {
+        언어: "Java,JavaScript",
+        프레임워크: "SpringBoot",
+        라이브러리: "React, JPA, JWT",
+        데이터베이스: "MySQL",
+        API: "OpenAPI, REST API",
+        배포: "AWS"
+      },
       roles: [
         "SpringBoot로 데이터 가공 및 로직 구현",
         "CRUD API 기능 구현",
@@ -28,8 +36,16 @@ function Projects() {
     },
     {
       title: "축구 정보 및 매칭 플랫폼",
-      duration: "2026.06.14 ~ 진행중",
+      duration: "2026.06.22 ~ 진행중",
       members: " 개인프로젝트",
+        techStack: {
+        언어: "C#,HTML,JS",
+        프레임워크: "ASP.NET Core",
+        라이브러리: "Entity Framework Core",
+        데이터베이스: "MySQL",
+        API: "",
+        배포: ""
+      },
       roles: [
         "채팅 시스템 구현(예정)",
         "네이버 지도 API 연동(예정)",
@@ -61,7 +77,11 @@ function Projects() {
           return (
           <article key={index}>
             <div className="image-text">
-              <img src={project.thumbnail} alt={`project-thumbnail-${index}`} />
+              <img
+                src={project.thumbnail}
+                alt={`${project.title} thumbnail`}
+                title={project.title}
+              />
               <p>{project.title}</p>
             </div>
             <div className="project-details">
@@ -75,6 +95,14 @@ function Projects() {
                 ))}
               </ul>
             </div>
+             <p>기술스택:</p>
+              <ul>
+                {Object.entries(project.techStack).map(([category, stack], stackIndex) => (
+                  <li key={stackIndex}>
+                    {category}: {stack}
+                  </li>
+                ))}
+              </ul>
             <div className="project-links">
               <div className="project-link-main">
                 <a

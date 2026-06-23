@@ -26,6 +26,13 @@ import vscodeIcon from "../image/VSCode.svg";
 import visualStudioIcon from "../image/VisualStudio-Light.svg";
 import ymlIkon from "../image/ymlIkon.png";
 
+function SkillIcon({ src, name, alt = name }) {
+  return (
+    <span className="skill-icon" data-title={name}>
+      <img src={src} alt={alt} title={name} />
+    </span>
+  );
+}
 
 function Skills() {
   return (
@@ -35,41 +42,41 @@ function Skills() {
         <div className="tech">
           <h3>프로그래밍 언어</h3>
           <p className="tech-icons">
-            <img src={javaIcon} alt="java" />
-            <img src={htmlIcon} alt="html" />
-            <img src={cssIcon} alt="css" />
-            <img src={csharpIcon} alt="C Sharp" />
-            <img src={jsIcon} alt="JavaScript" />
-            <img src={ymlIkon} alt="ymlIkon" />
+            <SkillIcon src={javaIcon} name="Java" />
+            <SkillIcon src={htmlIcon} name="HTML" />
+            <SkillIcon src={cssIcon} name="CSS" />
+            <SkillIcon src={csharpIcon} name="C#" alt="C Sharp" />
+            <SkillIcon src={jsIcon} name="JavaScript" />
+            <SkillIcon src={ymlIkon} name="YAML" />
           </p>
         </div>
         <div className="tech">
           <h3>프레임워크/라이브러리</h3>
           <p className="tech-icons">
-            <img src={gradleIcon} alt="Gradle" />
-            <img src={mysqlIcon} alt="mysql" />
-            <img src={nodejsIcon} alt="nodejs" />
-            <img src={reactIcon} alt="react" />
-            <img src={springIcon} alt="spring" />
-            <img src={aspnetCoreIcon} alt="ASP.NET Core" title="ASP.NET Core" />
-            <img src={winFormsIcon} alt="WinForms" title="WinForms" />
-            <img src={efCoreIcon} alt="Entity Framework Core" title="Entity Framework Core" />
-            <img src={identityIcon} alt="ASP.NET Identity" title="ASP.NET Identity" />
-            <img src={kakaoOAuthIcon} alt="Kakao OAuth" title="Kakao OAuth" />
+            <SkillIcon src={gradleIcon} name="Gradle" />
+            <SkillIcon src={mysqlIcon} name="MySQL" />
+            <SkillIcon src={nodejsIcon} name="Node.js" />
+            <SkillIcon src={reactIcon} name="React" />
+            <SkillIcon src={springIcon} name="Spring" />
+            <SkillIcon src={aspnetCoreIcon} name="ASP.NET Core" />
+            <SkillIcon src={winFormsIcon} name="WinForms" />
+            <SkillIcon src={efCoreIcon} name="Entity Framework Core" />
+            <SkillIcon src={identityIcon} name="ASP.NET Identity" />
+            <SkillIcon src={kakaoOAuthIcon} name="Kakao OAuth" />
           </p>
         </div>
         <div className="tech">
           <h3>도구 및 플랫폼</h3>
           <p className="tech-icons">
-            <img src={androidStudioIcon} alt="androidstudio" />
-            <img src={eclipseIcon} alt="eclipse" />
-            <img src={awsIcon} alt="aws" />
-            <img src={firebaseIcon} alt="firebase" />
-            <img src={gitIcon} alt="git" />
-            <img src={githubIcon} alt="github" />
-            <img src={postmanIcon} alt="postman" />
-            <img src={vscodeIcon} alt="vscode" />
-            <img src={visualStudioIcon} alt="visualstudio" />
+            <SkillIcon src={androidStudioIcon} name="Android Studio" />
+            <SkillIcon src={eclipseIcon} name="Eclipse" />
+            <SkillIcon src={awsIcon} name="AWS" />
+            <SkillIcon src={firebaseIcon} name="Firebase" />
+            <SkillIcon src={gitIcon} name="Git" />
+            <SkillIcon src={githubIcon} name="GitHub" />
+            <SkillIcon src={postmanIcon} name="Postman" />
+            <SkillIcon src={vscodeIcon} name="VS Code" />
+            <SkillIcon src={visualStudioIcon} name="Visual Studio" />
           </p>
         </div>
       </div>

@@ -64,16 +64,20 @@
 }
 
 #projects .project-details p {
-  margin: 0.5rem 0;
+  margin: 0.2rem 0;
   font-size: 0.9rem;
   color: var(--secondary-color);
 }
 
 #projects .project-details ul {
-  margin: 0.5rem 0;
+  margin: 0.1rem 0 0.35rem 0;
   padding-left: 1rem;
   font-size: 0.9rem;
   color: var(--secondary-color);
+}
+
+#projects .project-details li {
+  margin: 0.02rem 0;
 }
 
 #projects .project-links {
@@ -102,4 +106,21 @@
 #projects .project-links a:hover {
   color: #000099; /* 더 어두운 파랑색 */
   text-decoration: underline; /* 마우스 올릴 때 밑줄 추가 */
+}
+
+#projects article > p {
+  margin: 0.2rem 0 0;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+#projects article > ul {
+  margin: 0.1rem 0 0.4rem;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+#projects article > ul li {
+  margin: 0;
 }
