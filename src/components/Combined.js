@@ -1,68 +1,46 @@
-import React from "react";
-import VolunteerImage from "../image/volunteer.jpg";
-import "../css/Combined.css";
+import React, { useState } from "react";
+import ProfileImage from "../image/profile.jpg";
 
-function Combined() {
+function ContactIcon({ type }) {
+  if (type === "github") return <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.03-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.4-1.22.71-1.5-2.5-.29-5.13-1.25-5.13-5.56 0-1.23.44-2.24 1.16-3.03-.12-.29-.5-1.43.11-2.98 0 0 .95-.3 3.08 1.15a10.7 10.7 0 0 1 5.6 0c2.14-1.45 3.08-1.15 3.08-1.15.62 1.55.23 2.69.12 2.98.72.79 1.15 1.8 1.15 3.03 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.11c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z" /></svg>;
+  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{type === "email" ? <><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 6 9 7 9-7" /></> : <><rect x="6" y="2" width="12" height="20" rx="2" /><path d="M10 5h4M11 19h2" /></>}</svg>;
+}
+
+export default function Combined() {
+  const [copyStatus, setCopyStatus] = useState("");
+  async function copyContact(label, value) {
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error("Clipboard unavailable");
+      await navigator.clipboard.writeText(value);
+      setCopyStatus(`${label} 복사 완료`);
+    } catch {
+      setCopyStatus("복사하지 못했습니다. 텍스트를 직접 선택해 복사해 주세요.");
+    }
+  }
   return (
-    <section id="combined">
-      <div className="combined-container">
-        {/* ME Section */}
-        <div className="ME">
-          <div className="ME-image">
-            <img src={VolunteerImage} alt="윤승범 프로필" title="윤승범 프로필" />
-          </div>
-          <div className="ME-text">
-            <h1>Tendai | 중고 신입 개발자</h1>
-            <p>현업 감각을 갖춘 개발자 윤승범입니다.</p>
-            <p>해외봉사를 통해 남들과 다른 마인드를 소유했습니다.</p>
-            <p>신기술 습득에 두려움보단 신선한 충격을 즐깁니다.</p>
-            <p>해결에서 오는 도파민을 즐겨 개발자를 선택했습니다.</p>
-            <p><strong>Tendai는 스와힐리어로 "감사"라는 뜻입니다.</strong></p>
-            <p><strong>2018.02 - 2019.02 IN Zimbabwe </strong></p>
-          </div>
-        </div>
-
-        {/* Information Section */}
-        <div className="Information">
-          <h2>Information</h2>
-          <div className="box-container">
-            <div className="box">
-              <h2>CHANNEL</h2>
-              <p>
-              <a
-                className="github-link"
-                href="https://github.com/yunseungbum"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                  https://github.com/yunseungbum
-                </a>
-              </p>
-            </div>
-            <div className="box">
-              <h2>CONTACTS</h2>
-              <p>010-4923-5248</p>
-              <p>ibm15444@naver.com</p>
-            </div>
-            <div className="box">
-              <h2>EDUCATION</h2>
-              <p>2024.07 ~ 2025.01</p>
-              <p>코리아IT아카데미 AWS활용 풀스택 개발</p>
-              <p>2017.02 ~ 2022.12</p>
-              <p>인하공업전문대학 정보통신공학과 졸업</p>
-            </div>
-            <div className="box">
-              <h2>WORK</h2>
-              <p>2025.02 ~ 재직중</p>
-              <p>쇼핑몰 통합 수집 프로그램 개발(C#) 및 CS업무 보조</p>
-              <p>2023.01 ~ 2024.05</p>
-              <p>시청 PC 소프트웨어 및 하드웨어 유지보수</p>
-            </div>
-          </div>
-        </div>
+    <section id="combined" className="hero" aria-labelledby="intro-heading">
+      <div className="page-width hero-layout">
+        <div className="portrait-wrap">
+          <img className="portrait" src={ProfileImage} alt="윤승범" width="280" height="280" />
+          <span className="portrait-caption">YUN SEUNG BUM / TENDAI</span>
+      </div>
+        <div className="hero-copy">
+          <p className="intro-name" id="intro-heading">안녕하세요, <strong>윤승범</strong>입니다.</p>
+          <p className="intro-description">C#기반 회사에서 근무 한 경험이 있습니다.<br />해결에서 오는 도파민을 즐깁니다. <br className="desktop-break" /> <strong>현재는 AI와 협업 중 입니다.</strong></p>
+      </div>
+        <aside className="hero-contact" aria-label="연락처">
+          <button type="button" className="contact-action" onClick={() => copyContact("이메일", "ibm15444@naver.com")} aria-label="이메일 ibm15444@naver.com 복사">
+            <ContactIcon type="email" /><div><strong>ibm15444@naver.com</strong></div>
+          </button>
+          <button type="button" className="contact-action" onClick={() => copyContact("전화번호", "010-4923-5248")} aria-label="전화번호 010-4923-5248 복사">
+            <ContactIcon type="phone" /><div><strong>010-4923-5248</strong></div>
+          </button>
+          <a className="contact-action" href="https://github.com/yunseungbum" target="_blank" rel="noopener noreferrer">
+            <ContactIcon type="github" /><div><strong>github.com/yunseungbum</strong></div>
+          </a>
+          <p className="contact-copy-status" role="status" aria-live="polite">{copyStatus}</p>
+        </aside>
       </div>
     </section>
   );
 }
-
-export default Combined;

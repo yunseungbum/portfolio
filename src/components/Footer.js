@@ -1,11 +1,4 @@
 import React from "react";
-import "../css/Footer.css";
-const Footer = () => {
-  return (
-    <footer>
-      <p>&copy; 2024 Bum 포트폴리오. All Rights Reserved.</p>
-    </footer>
-  );
-};
-
-export default Footer;
+export default function Footer() {
+  return <footer><div className="page-width footer-inner"><span>YUN SEUNG BUM<span className="footer-dot">.</span></span><p>© {new Date().getFullYear()} · Built with React</p><a href="#combined">맨 위로 ↑</a></div></footer>;
+}

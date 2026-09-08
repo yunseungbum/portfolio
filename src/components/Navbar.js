@@ -12,8 +12,6 @@ function Navbar() {
           <li><a href="#projects">Projects</a></li>
         </ul>
       </nav>
-
-       <div className="header-image"></div>
     </>
   );
 }

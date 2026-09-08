@@ -1,22 +1,20 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Skills from "./components/Skills"; // 정확한 경로 확인
-import Projects from "./components/Projects";
-import Activity from "./components/Activity";
-import Footer from "./components/Footer"; // 정확한 경로 확인
 import Combined from "./components/Combined";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Information from "./components/Information";
+import Footer from "./components/Footer";
+import "./css/Theme.css";
 
-const App = () => {
-  return (
-    <div>
-      <Navbar />
-      <Combined/>
-      <Skills />
+export default function App() {
+  return <>
+    <a className="skip-link" href="#projects">프로젝트로 바로가기</a>
+    <main>
+      <Combined />
       <Projects />
-      {/* <Activity /> */}
-      <Footer />
-    </div>
-  );
-};
-
-export default App;
+      <Skills />
+      <Information />
+    </main>
+    <Footer />
+  </>;
+}

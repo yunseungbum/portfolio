@@ -1,86 +1,71 @@
 import React from "react";
-import "../css/Skill.css";
-import javaIcon from "../image/Java-Light.svg";
-import htmlIcon from "../image/HTML.svg";
-import cssIcon from "../image/CSS.svg";
+
 import csharpIcon from "../image/CS.svg";
+import javaIcon from "../image/Java-Light.svg";
 import jsIcon from "../image/JavaScript.svg";
-import gradleIcon from "../image/Gradle-Light.svg";
-import mysqlIcon from "../image/MySQL-Light.svg";
-import nodejsIcon from "../image/NodeJS-Light.svg";
+import cssIcon from "../image/CSS.svg";
 import reactIcon from "../image/React-Light.svg";
-import springIcon from "../image/Spring-Light.svg";
 import aspnetCoreIcon from "../image/ASPNETCore.svg";
 import winFormsIcon from "../image/WinForms.svg";
-import efCoreIcon from "../image/EFCore.svg";
-import identityIcon from "../image/Identity.svg";
-import kakaoOAuthIcon from "../image/KakaoOAuth.svg";
-import androidStudioIcon from "../image/AndroidStudio-Light.svg";
-import eclipseIcon from "../image/Eclipse-Light.svg";
-import awsIcon from "../image/AWS-Light.svg";
-import firebaseIcon from "../image/Firebase-Light.svg";
-import gitIcon from "../image/Git.svg";
-import githubIcon from "../image/Github-Light.svg";
-import postmanIcon from "../image/Postman.svg";
+import mysqlIcon from "../image/MySQL-Light.svg";
+import dbeaverIcon from "../image/dbeaver.svg";
+import intellijIcon from "../image/intellij.svg";
 import vscodeIcon from "../image/VSCode.svg";
 import visualStudioIcon from "../image/VisualStudio-Light.svg";
-import ymlIkon from "../image/ymlIkon.png";
+import gradleIcon from "../image/Gradle-Light.svg";
+import githubIcon from "../image/Github-Light.svg";
+import svnIcon from "../image/subversion.svg";
+import awsIcon from "../image/AWS-Light.svg";
 
-function SkillIcon({ src, name, alt = name }) {
-  return (
-    <span className="skill-icon" data-title={name}>
-      <img src={src} alt={alt} title={name} />
-    </span>
-  );
-}
+const skillGroups = [
+  { title: "언어 · 스타일", items: [
+    { name: "C#", icon: csharpIcon },
+    { name: "Java", icon: javaIcon },
+    { name: "JavaScript", icon: jsIcon },
+    { name: "CSS", icon: cssIcon },
+  ] },
+  { title: "프레임워크 · 라이브러리", items: [
+    { name: "React", icon: reactIcon },
+    { name: "ASP.NET Core", icon: aspnetCoreIcon },
+    { name: "WinForms", icon: winFormsIcon },
+  ] },
+  { title: "데이터베이스 · 도구", items: [
+    { name: "MySQL", icon: mysqlIcon },
+    { name: "DBeaver", icon: dbeaverIcon },
+  ] },
+  { title: "개발 환경 · 빌드 도구", items: [
+    { name: "IntelliJ IDEA", icon: intellijIcon },
+    { name: "VS Code", icon: vscodeIcon },
+    { name: "Visual Studio", icon: visualStudioIcon },
+    { name: "Gradle", icon: gradleIcon },
+  ] },
+  { title: "버전 관리 · 클라우드", items: [
+    { name: "GitHub", icon: githubIcon },
+    { name: "SVN", icon: svnIcon },
+    { name: "AWS", icon: awsIcon },
+  ] },
+];
 
 function Skills() {
   return (
-    <section id="skills">
-      <h2>SKILLS</h2>
+    <section id="skills" aria-labelledby="skills-heading">
+      <div className="page-width"><div className="section-heading"><div><p className="eyebrow">02 / TOOLKIT</p><h2 id="skills-heading">Skill</h2></div></div>
       <div className="skills-container">
-        <div className="tech">
-          <h3>프로그래밍 언어</h3>
-          <p className="tech-icons">
-            <SkillIcon src={javaIcon} name="Java" />
-            <SkillIcon src={htmlIcon} name="HTML" />
-            <SkillIcon src={cssIcon} name="CSS" />
-            <SkillIcon src={csharpIcon} name="C#" alt="C Sharp" />
-            <SkillIcon src={jsIcon} name="JavaScript" />
-            <SkillIcon src={ymlIkon} name="YAML" />
-          </p>
-        </div>
-        <div className="tech">
-          <h3>프레임워크/라이브러리</h3>
-          <p className="tech-icons">
-            <SkillIcon src={gradleIcon} name="Gradle" />
-            <SkillIcon src={mysqlIcon} name="MySQL" />
-            <SkillIcon src={nodejsIcon} name="Node.js" />
-            <SkillIcon src={reactIcon} name="React" />
-            <SkillIcon src={springIcon} name="Spring" />
-            <SkillIcon src={aspnetCoreIcon} name="ASP.NET Core" />
-            <SkillIcon src={winFormsIcon} name="WinForms" />
-            <SkillIcon src={efCoreIcon} name="Entity Framework Core" />
-            <SkillIcon src={identityIcon} name="ASP.NET Identity" />
-            <SkillIcon src={kakaoOAuthIcon} name="Kakao OAuth" />
-          </p>
-        </div>
-        <div className="tech">
-          <h3>도구 및 플랫폼</h3>
-          <p className="tech-icons">
-            <SkillIcon src={androidStudioIcon} name="Android Studio" />
-            <SkillIcon src={eclipseIcon} name="Eclipse" />
-            <SkillIcon src={awsIcon} name="AWS" />
-            <SkillIcon src={firebaseIcon} name="Firebase" />
-            <SkillIcon src={gitIcon} name="Git" />
-            <SkillIcon src={githubIcon} name="GitHub" />
-            <SkillIcon src={postmanIcon} name="Postman" />
-            <SkillIcon src={vscodeIcon} name="VS Code" />
-            <SkillIcon src={visualStudioIcon} name="Visual Studio" />
-          </p>
-        </div>
+        {skillGroups.map((group) => (
+          <div className="skill-row" key={group.title}>
+            <h3>{group.title}</h3>
+            <ul className="skill-items">
+              {group.items.map((item) => (
+                <li className="skill-item" key={item.name}>
+                  <img src={item.icon} alt="" width="40" height="40" />
+                  <span>{item.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
-    </section>
+      </div></section>
   );
 }
 

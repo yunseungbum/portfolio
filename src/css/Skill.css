@@ -1,114 +1,110 @@
 #skills {
-  margin: 2rem 0;
-  text-align: center;
+  box-sizing: border-box;
+  width: calc(100% - 80px);
+  max-width: 1040px;
+  margin: 3rem auto;
   padding: 20px;
-  border: 2px solid transparent; /* 외부 테두리 */
-  border-radius: 15px; /* 둥근 모서리 */
-
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 외부 그림자 */
+  border: 2px solid transparent;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 #skills h2 {
+  margin: 0 0 24px;
+  text-align: center;
   font-size: 1.5rem;
   color: #333;
-  margin-bottom: 1rem;
-  font-weight: bold;
 }
 
-.skills-container {
-  display: flex; /* 가로 정렬 */
-  justify-content: space-around; /* 요소 간격 균등 */
-  align-items: flex-start; /* 위쪽 정렬 */
+#skills .skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 
-.tech {
-  flex: 1; /* 균등한 너비 */
+#skills .skill-row {
+  box-sizing: border-box;
+  flex: 0 0 calc((100% - 40px) / 3);
+  min-width: 0;
+  padding: 22px 12px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: linear-gradient(#fff, #fff) padding-box,
+              linear-gradient(45deg, #FFD700, #FFA500) border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#skills .skill-row:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#skills .skill-row h3 {
+  margin: 0 0 22px;
   text-align: center;
-  padding: 15px;
-  border: 2px solid transparent; /* 투명 테두리 */
-  border-radius: 10px; /* 둥근 모서리 */
-  background: linear-gradient(#fff, #fff) padding-box, /* 내부 배경 */
-              linear-gradient(45deg, #FFD700, #FFA500) border-box; /* 노란색 계열 그라데이션 */
-
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 내부 그림자 */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
 }
 
-.tech:hover {
-  transform: translateY(-5px); /* 살짝 위로 올라가는 효과 */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 호버 시 그림자 확대 */
-}
-
-.tech h3 {
-  font-size: 1.2rem;
-  color: var(--primary-color, #333);
-  margin-bottom: 10px;
-}
-
-.tech-icons {
+#skills .skill-items {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap; /* 반응형으로 아이콘 줄바꿈 가능 */
+  gap: 20px 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.skill-icon {
-  position: relative;
-  display: inline-flex;
-  width: 40px;
-  height: 40px;
+#skills .skill-item {
+  flex: 0 0 calc((100% - 24px) / 4);
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  overflow: visible;
+  gap: 10px;
+  text-align: center;
+  min-width: 0;
 }
 
-.tech-icons img {
+#skills .skill-item img {
   width: 40px;
   height: 40px;
-  transition: transform 0.3s ease-in-out;
+  object-fit: contain;
 }
 
-.skill-icon:hover img {
-  transform: scale(1.1);
+#skills .skill-item span {
+  color: #555;
+  font-size: 0.7rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
 }
 
-.skill-icon::after {
-  content: attr(data-title);
-  position: absolute;
-  left: 50%;
-  bottom: calc(100% + 8px);
-  transform: translateX(-50%);
-  padding: 5px 8px;
-  border-radius: 6px;
-  background: #222;
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  line-height: 1;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease-in-out;
-  z-index: 10;
+@media (max-width: 900px) {
+  #skills .skill-row {
+    flex-basis: calc((100% - 20px) / 2);
+  }
 }
 
-.skill-icon::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: calc(100% + 3px);
-  transform: translateX(-50%);
-  border-width: 5px 5px 0 5px;
-  border-style: solid;
-  border-color: #222 transparent transparent transparent;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease-in-out;
-  z-index: 10;
+@media (max-width: 640px) {
+  #skills .skill-row {
+    flex-basis: 100%;
+  }
 }
 
-.skill-icon:hover::after,
-.skill-icon:hover::before {
-  opacity: 1;
+@media (max-width: 480px) {
+  #skills {
+    width: calc(100% - 32px);
+    padding: 16px 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #skills .skill-row {
+    transition: none;
+  }
 }
