@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.e578df20.css",
-    "main.js": "/portfolio/static/js/main.b11c2a18.js",
+    "main.css": "/portfolio/static/css/main.179f698b.css",
+    "main.js": "/portfolio/static/js/main.1fe8ae87.js",
     "static/js/488.21a3b654.chunk.js": "/portfolio/static/js/488.21a3b654.chunk.js",
     "static/media/kickoffice-preview.png": "/portfolio/static/media/kickoffice-preview.750d422e26c2874c48fe.png",
     "static/media/football-preview.png": "/portfolio/static/media/football-preview.3fba41db269766b2d80a.png",
@@ -25,12 +25,12 @@
     "static/media/ASPNETCore.svg": "/portfolio/static/media/ASPNETCore.724838bc853414b29a4ea1fd7706c60d.svg",
     "static/media/CSS.svg": "/portfolio/static/media/CSS.6c7908e02fa11016d13905e451c5e1e8.svg",
     "static/media/WinForms.svg": "/portfolio/static/media/WinForms.a86ad9025b17c1e55ce01dbc930c6b6a.svg",
-    "main.e578df20.css.map": "/portfolio/static/css/main.e578df20.css.map",
-    "main.b11c2a18.js.map": "/portfolio/static/js/main.b11c2a18.js.map",
+    "main.179f698b.css.map": "/portfolio/static/css/main.179f698b.css.map",
+    "main.1fe8ae87.js.map": "/portfolio/static/js/main.1fe8ae87.js.map",
     "488.21a3b654.chunk.js.map": "/portfolio/static/js/488.21a3b654.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e578df20.css",
-    "static/js/main.b11c2a18.js"
+    "static/css/main.179f698b.css",
+    "static/js/main.1fe8ae87.js"
   ]
 }
