@@ -2,6 +2,7 @@ import React from "react";
 import Combined from "./components/Combined";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import TechnicalDocuments from "./components/TechnicalDocuments";
 import Information from "./components/Information";
 import Footer from "./components/Footer";
 import "./css/Theme.css";
@@ -13,6 +14,7 @@ export default function App() {
       <Combined />
       <Projects />
       <Skills />
+      <TechnicalDocuments />
       <Information />
     </main>
     <Footer />

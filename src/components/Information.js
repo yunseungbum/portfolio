@@ -4,7 +4,7 @@ export default function Information() {
   return (
     <section id="information" className="information-section" aria-labelledby="info-heading">
       <div className="page-width">
-        <div className="section-heading"><div><p className="eyebrow">03 / BACKGROUND</p><h2 id="info-heading">History</h2></div></div>
+        <div className="section-heading"><div><p className="eyebrow">04 / BACKGROUND</p><h2 id="info-heading">History</h2></div></div>
         <div className="information-grid">
           <div className="history-panel">
             <div className="history-group"><h3>경력 <span>EXPERIENCE</span></h3>

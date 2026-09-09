@@ -355,3 +355,53 @@ button { font-weight: 600; }
 .gallery-duration > span { color: var(--project-accent); font-weight: 700; margin-right: 6px; }
 .project-dialog .test-account code { color: var(--project-accent); }
 .information-section .information-grid { grid-template-columns: minmax(0, 1fr); width: 100%; max-width: 720px; margin-inline: auto; gap: 0; }
+
+.technical-documents-section { padding: 64px 0 72px; background: #ffffff; border-bottom: 1px solid var(--line); }
+.technical-documents-card { padding: 28px; border: 2px solid var(--green-border); border-radius: 12px; background: #ffffff; }
+.technical-documents-card h3 { font-size: 22px; margin-bottom: 12px; }
+.technical-documents-description, .technical-documents-role { font-size: 14px; line-height: 1.8; word-break: keep-all; }
+.technical-documents-role { color: #555555; margin-bottom: 22px; }
+.technical-documents-role strong { color: var(--accent); margin-right: 10px; }
+.technical-document-links { display: flex; flex-wrap: wrap; gap: 12px; }
+.technical-document-links a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 16px; border: 1px solid var(--green-border); border-radius: 8px; background: #edf4ef; color: #205c36; font-size: 13px; font-weight: 700; }
+.technical-document-links svg { width: 18px; height: 18px; flex: 0 0 18px; }
+.technical-document-links a:hover { background: #267343; color: #ffffff; }
+.technical-document-links a:focus-visible { outline: 3px solid #267343; outline-offset: 3px; }
+@media (max-width: 640px) {
+  .technical-documents-section { padding: 40px 0; }
+  .technical-documents-card { padding: 20px; }
+}
+/* Monochrome technical documents section. */
+.technical-documents-section { background: #ffffff; color: #000000; border-bottom-color: #000000; }
+.technical-documents-section .eyebrow,
+.technical-documents-role,
+.technical-documents-role strong { color: #000000; }
+.technical-documents-card { background: #ffffff; border-color: #000000; }
+.technical-document-links a { background: #ffffff; color: #000000; border-color: #000000; }
+.technical-document-links a:hover { background: #000000; color: #ffffff; }
+.technical-document-links a:focus-visible { outline-color: #000000; }
+.technical-stack { margin: 0 0 24px; color: #000000; }
+.technical-stack h4 { font-size: 14px; margin-bottom: 14px; }
+.technical-stack dl { margin: 0; display: grid; gap: 12px; }
+.technical-stack-row { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 12px; align-items: baseline; }
+.technical-stack dt { font-size: 12px; font-weight: 700; }
+.technical-stack dd { margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.technical-stack dd span { border: 1px solid #000000; background: #ffffff; border-radius: 5px; padding: 5px 9px; font-size: 12px; }
+@media (max-width: 640px) { .technical-stack-row { grid-template-columns: minmax(0, 1fr); gap: 8px; } }
+/* Compact technical documents card. */
+.technical-documents-card { width: fit-content; max-width: 100%; padding: 16px; }
+.technical-documents-card h3 { margin-bottom: 8px; }
+.technical-documents-description { margin-bottom: 6px; }
+.technical-documents-role { margin-bottom: 12px; }
+.technical-stack { margin-bottom: 14px; }
+.technical-stack h4 { margin-bottom: 8px; }
+.technical-stack dl { gap: 6px; }
+.technical-stack-row { grid-template-columns: 120px minmax(0, 1fr); gap: 8px; }
+.technical-stack dd { gap: 4px; }
+.technical-stack dd span { padding: 3px 7px; }
+.technical-document-links { gap: 8px; }
+.technical-document-links a { padding: 8px 12px; }
+@media (max-width: 640px) {
+  .technical-documents-card { padding: 12px; }
+  .technical-stack-row { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+}
